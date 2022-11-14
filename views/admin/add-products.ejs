@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+ <%- include("../partials/head.ejs") %>
+  <link rel="stylesheet" href="/css/forms.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/products.css">
+
+  <body>
+   <%- include("../partials/nav.ejs") -%>
+
+    <div class="content">
+      
+    <form class="product-form" action="/admin/add-products" method="POST">
+
+      <!-- Product title -->
+      <div class="form-control">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title"/>
+      </div>
+
+      <!-- Product image -->
+      <div class="form-control">
+        <label for="imageUrl">Image URL</label>
+        <input type="text" name="imageUrl" id="imageUrl"/>
+      </div>
+
+      <!-- Product Price -->
+      <div class="form-control">
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price" step="0.01"/>
+      </div>
+
+      <!-- Product Decription -->
+      <div class="form-control">
+        <label for="description">Description</label>
+        <textarea  name="description" id="description" rows="5"></textarea >
+      </div>
+
+      <button class="btn">
+        Add Product
+      </button>
+    </input >
+    </form>
+    </div>
+    
+    <%- include("../partials/footer.ejs") -%>
+  </body>
+</html>
